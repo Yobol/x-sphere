@@ -71,6 +71,14 @@ $ NODE_ENV=production taro build --type weapp --watch # Bash
 
 1. 下载并打开[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)，选择项目根目录以导入项目。
 
+   - 需要先[注册小程序账号](https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/getstart.html#%E7%94%B3%E8%AF%B7%E8%B4%A6%E5%8F%B7)
+
+     1. 添加 `.env.[mode].local` 文件，添加 `TARO_APP_ID` 配置，在提交代码时会被 git 忽略，避免提交隐私信息
+
+     1. 本地开发模式启动：`taro build --type weapp --watch --mode development`
+
+     1. 小程序导入项目，选择 `dist` 目录（后端服务选择不使用云服务）
+
    - 需要设置关闭 ES6 转 ES5 功能，开启可能报错
    - 需要设置关闭上传代码时样式自动补全，开启可能报错
    - 需要设置关闭代码压缩上传，开启可能报错
